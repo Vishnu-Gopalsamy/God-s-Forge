@@ -4,13 +4,12 @@ import { useRef, useEffect, useState } from 'react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import { ArrowUpRight, Flame, Zap, Shield } from 'lucide-react'
 import MagneticButton from './MagneticButton'
-import HeroReactor from './HeroReactor'
 
 /* =============================================================
-   HERO — Cinematic, dramatic, wow-factor entrance
+   HERO — Clean, refined, professional entrance
 ============================================================= */
 
-// Floating particle in Hero background
+// Floating subtle ambient light
 function FloatingOrb({ size, x, y, color, delay, duration }) {
   return (
     <motion.div
@@ -24,10 +23,9 @@ function FloatingOrb({ size, x, y, color, delay, duration }) {
         filter: `blur(${size / 2}px)`,
       }}
       animate={{
-        y: [0, -30, 0],
-        x: [0, 15, 0],
-        scale: [1, 1.1, 1],
-        opacity: [0.4, 0.7, 0.4],
+        y: [0, -20, 0],
+        scale: [1, 1.05, 1],
+        opacity: [0.3, 0.5, 0.3],
       }}
       transition={{
         duration,
@@ -58,13 +56,7 @@ export default function Hero() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
   const y = useTransform(scrollYProgress, [0, 1], [0, 120])
   const opacity = useTransform(scrollYProgress, [0, 0.75], [1, 0])
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    // Delay hero animation to after intro
-    const t = setTimeout(() => setIsLoaded(true), 100)
-    return () => clearTimeout(t)
-  }, [])
+  const [isLoaded, setIsLoaded] = useState(true)
 
   const heroWords = ['We', 'Forge']
 
@@ -73,41 +65,28 @@ export default function Hero() {
       ref={ref}
       className="relative min-h-screen pt-28 pb-24 overflow-hidden flex flex-col justify-center items-center"
     >
-      {/* ── BACKGROUND LAYER ─────────────────────────────────── */}
+      {/* ── BACKGROUND LAYER (Clean & Professional) ───────────── */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Dual-bloom ambience */}
-        <FloatingOrb size={600} x={20} y={-10} color="radial-gradient(circle, rgba(242,82,14,0.18) 0%, transparent 70%)" delay={0} duration={8} />
-        <FloatingOrb size={700} x={55} y={-5} color="radial-gradient(circle, rgba(40,63,215,0.16) 0%, transparent 70%)" delay={1.5} duration={10} />
-        <FloatingOrb size={400} x={70} y={40} color="radial-gradient(circle, rgba(242,82,14,0.1) 0%, transparent 70%)" delay={3} duration={12} />
-        <FloatingOrb size={350} x={10} y={50} color="radial-gradient(circle, rgba(40,63,215,0.1) 0%, transparent 70%)" delay={2} duration={9} />
+        {/* Soft atmospheric glow */}
+        <FloatingOrb size={500} x={25} y={-5} color="radial-gradient(circle, rgba(242,82,14,0.12) 0%, transparent 70%)" delay={0} duration={9} />
+        <FloatingOrb size={600} x={50} y={0} color="radial-gradient(circle, rgba(40,63,215,0.1) 0%, transparent 70%)" delay={1.5} duration={11} />
 
-        {/* Grid */}
-        <div className="absolute inset-0 bg-grid-brand radial-fade-furnace opacity-50" />
+        {/* Ambient Grid */}
+        <div className="absolute inset-0 bg-grid-brand radial-fade-furnace opacity-35" />
 
-        {/* Vignette */}
+        {/* Edge Vignette */}
         <div
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at center, transparent 55%, rgba(250,247,242,0.6) 100%)',
+            background: 'radial-gradient(ellipse at center, transparent 65%, rgba(250,247,242,0.7) 100%)',
           }}
         />
         <div className="dark:block hidden absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at center, transparent 55%, rgba(6,9,17,0.7) 100%)',
+            background: 'radial-gradient(ellipse at center, transparent 65%, rgba(6,9,17,0.8) 100%)',
           }}
         />
       </div>
-
-      {/* ── QUANTUM CRUCIBLE REACTOR BACKDROP ────────────────── */}
-      <motion.div
-        className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
-        style={{ y: useTransform(scrollYProgress, [0, 1], [0, 60]), opacity }}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={isLoaded ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-      >
-        <HeroReactor />
-      </motion.div>
 
       {/* ── CONTENT ──────────────────────────────────────────── */}
       <motion.div
