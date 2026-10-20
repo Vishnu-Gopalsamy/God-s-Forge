@@ -44,11 +44,11 @@ export default function WhatWeDo() {
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-14 md:mb-20">
           <SectionLabel>Our Model</SectionLabel>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 dark:text-white tracking-tight leading-tight mt-3"
+            transition={{ duration: 0.6 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-slate-900 dark:text-white tracking-tight leading-tight mt-3"
           >
             A practical, stage-based approach to <br className="hidden sm:block" />
             <span className="italic text-brand-gradient font-normal">deep technology.</span>
@@ -59,8 +59,8 @@ export default function WhatWeDo() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-light leading-relaxed max-w-2xl text-balance"
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mt-6 text-xl sm:text-2xl text-slate-700 dark:text-slate-300 font-light leading-relaxed max-w-3xl text-balance"
           >
             We build high-utility tools for small businesses today, and use that revenue to fund real-world automation and sustainability technology for tomorrow.
           </motion.p>
@@ -73,40 +73,40 @@ export default function WhatWeDo() {
             return (
               <motion.div
                 key={stage.stage}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
                 whileHover={{ y: -6 }}
-                className="group relative rounded-3xl p-8 bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl dark:hover:border-slate-700 transition-all duration-300 flex flex-col justify-between"
+                className="group relative rounded-3xl p-9 bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl dark:hover:border-slate-700 transition-all duration-300 flex flex-col justify-between"
               >
                 {/* Ambient Top Glow */}
                 <div className={`absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r ${stage.color} opacity-80 group-hover:opacity-100 transition-opacity`} />
 
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-[10px] font-mono-tech tracking-[0.22em] uppercase text-slate-400 font-bold">
+                    <span className="text-xs sm:text-sm font-mono-tech tracking-[0.2em] uppercase text-slate-500 dark:text-slate-400 font-bold">
                       {stage.stage}
                     </span>
-                    <span className="text-[9px] font-mono-tech tracking-wider uppercase px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                    <span className="text-xs font-mono-tech tracking-wider uppercase px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-medium">
                       {stage.tag}
                     </span>
                   </div>
 
-                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${stage.color} flex items-center justify-center text-white mb-6 shadow-md`}>
-                    <Icon className="w-6 h-6" />
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${stage.color} flex items-center justify-center text-white mb-6 shadow-md`}>
+                    <Icon className="w-7 h-7" />
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-serif text-slate-900 dark:text-white mb-3">
+                  <h3 className="text-2xl sm:text-3xl font-serif text-slate-900 dark:text-white mb-3 leading-snug">
                     {stage.title}
                   </h3>
 
-                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                  <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-light">
                     {stage.description}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-2 text-xs font-mono-tech text-slate-400">
+                <div className="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-2 text-sm font-mono-tech text-slate-500 dark:text-slate-400 font-medium">
                   <span>Step 0{idx + 1} of 03</span>
                 </div>
               </motion.div>

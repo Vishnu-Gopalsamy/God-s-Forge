@@ -119,59 +119,59 @@ export default function ThimilPage() {
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs font-mono-tech tracking-[0.2em] uppercase mb-6"
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 text-xs sm:text-sm font-mono-tech tracking-[0.2em] uppercase mb-6 font-semibold"
           >
-            <Leaf className="w-3.5 h-3.5 text-emerald-500" />
+            <Leaf className="w-4 h-4 text-emerald-500" />
             DEEPTECH &bull; FIELD AUTOMATION
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl sm:text-7xl md:text-8xl font-serif text-slate-900 dark:text-white tracking-tight"
+            transition={{ duration: 0.6, delay: 0.05 }}
+            className="text-6xl sm:text-8xl md:text-9xl font-serif text-slate-900 dark:text-white tracking-tight leading-[0.95]"
           >
             Thimil.
           </motion.h1>
 
           {/* Hero pitch from brief */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-6 text-xl sm:text-2xl md:text-3xl text-slate-700 dark:text-slate-200 font-light max-w-3xl mx-auto leading-relaxed text-balance"
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mt-6 text-2xl sm:text-3xl md:text-4xl text-slate-800 dark:text-slate-100 font-serif max-w-4xl mx-auto leading-snug text-balance"
           >
             An autonomous robot that weeds fields without chemicals or manual labor.
           </motion.p>
 
           {/* Development Status Banner */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-8 inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-orange-500/10 border border-orange-500/30 text-orange-600 dark:text-orange-400 text-xs font-mono-tech tracking-wider uppercase font-semibold"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-8 inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-orange-500/10 border border-orange-500/30 text-orange-600 dark:text-orange-400 text-xs sm:text-sm font-mono-tech tracking-wider uppercase font-semibold"
           >
-            <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse" />
             Project Status: In Development &bull; Pre-Prototype R&amp;D
           </motion.div>
 
           {/* Problem Callout from brief */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-10 p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-[#0B101D]/90 border border-slate-200 dark:border-slate-800 shadow-lg max-w-3xl mx-auto backdrop-blur-md text-left"
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mt-10 p-7 sm:p-9 rounded-3xl bg-white/90 dark:bg-[#0B101D]/90 border border-slate-200 dark:border-slate-800 shadow-lg max-w-4xl mx-auto backdrop-blur-md text-left"
           >
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 mt-1">
-                <Sprout className="w-5 h-5" />
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 mt-1">
+                <Sprout className="w-6 h-6" />
               </div>
               <div>
-                <div className="text-[10px] font-mono-tech tracking-wider uppercase text-emerald-600 dark:text-emerald-400 font-semibold mb-1">
+                <div className="text-xs sm:text-sm font-mono-tech tracking-wider uppercase text-emerald-600 dark:text-emerald-400 font-bold mb-1.5">
                   Why Thimil Matters
                 </div>
-                <p className="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed font-light">
+                <p className="text-base sm:text-lg text-slate-700 dark:text-slate-200 leading-relaxed font-light">
                   Manual weeding is backbreaking, slow, and increasingly unaffordable as agricultural labor shifts to cities. Chemical herbicides poison beneficial soil biology, leach into rural water tables, and expose farm workers to severe health risks. Thimil restores the field mechanically — clean, autonomous, and sustainable.
                 </p>
               </div>
@@ -180,21 +180,21 @@ export default function ThimilPage() {
 
           {/* CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.55 }}
-            className="mt-10 flex flex-wrap justify-center gap-4"
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="mt-12 flex flex-wrap justify-center gap-5"
           >
             <button
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-[#283FD7] text-white font-semibold text-sm shadow-[0_4px_20px_rgba(16,185,129,0.35)] hover:scale-105 active:scale-95 transition-all"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-600 via-teal-600 to-[#283FD7] text-white font-semibold text-base sm:text-lg shadow-[0_4px_20px_rgba(16,185,129,0.35)] hover:scale-105 active:scale-95 transition-all"
             >
-              <Handshake className="w-4 h-4" />
-              Partner With Us <ArrowUpRight className="w-4 h-4" />
+              <Handshake className="w-5 h-5" />
+              Partner With Us <ArrowUpRight className="w-5 h-5" />
             </button>
             <a
               href="#technology"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-200 text-sm font-medium hover:border-emerald-500 transition-all"
+              className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-200 text-base font-medium hover:border-emerald-500 transition-all"
             >
               View R&amp;D Roadmap
             </a>

@@ -85,10 +85,10 @@ export default function Navbar() {
             <Logo size={42} />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-7">
+          <nav className="hidden md:flex items-center gap-8">
             <Link
               href="/"
-              className={`text-[13px] font-medium transition-colors relative group py-1 ${
+              className={`text-[15px] font-medium transition-colors relative group py-1 ${
                 isHome
                   ? 'text-[#283FD7] dark:text-[#60A5FA] font-semibold'
                   : 'text-slate-700 hover:text-[#283FD7] dark:text-slate-200 dark:hover:text-[#60A5FA]'
@@ -111,7 +111,7 @@ export default function Navbar() {
             >
               <button
                 onClick={() => setProductsOpen((prev) => !prev)}
-                className={`text-[13px] font-medium transition-colors inline-flex items-center gap-1.5 py-1 ${
+                className={`text-[15px] font-medium transition-colors inline-flex items-center gap-1.5 py-1 ${
                   isProductPage
                     ? 'text-[#283FD7] dark:text-[#60A5FA] font-semibold'
                     : 'text-slate-700 hover:text-[#283FD7] dark:text-slate-200 dark:hover:text-[#60A5FA]'
@@ -121,7 +121,7 @@ export default function Navbar() {
               >
                 Products
                 <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                  className={`w-4 h-4 transition-transform duration-200 ${
                     productsOpen ? 'rotate-180 text-[#F2520E]' : ''
                   }`}
                 />
@@ -136,7 +136,7 @@ export default function Navbar() {
                     transition={{ duration: 0.18 }}
                     className="absolute top-full -left-6 mt-2 w-80 rounded-2xl bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-slate-800 p-3 shadow-xl backdrop-blur-2xl z-50"
                   >
-                    <div className="text-[10px] font-mono-tech tracking-wider uppercase text-slate-400 px-3 py-1 font-semibold flex items-center justify-between">
+                    <div className="text-[11px] font-mono-tech tracking-wider uppercase text-slate-400 px-3 py-1 font-semibold flex items-center justify-between">
                       <span>Our Technologies</span>
                       <span className="w-1.5 h-1.5 rounded-full bg-[#F2520E]" />
                     </div>
@@ -156,7 +156,7 @@ export default function Navbar() {
                           >
                             <div className="flex items-center justify-between">
                               <span
-                                className={`text-sm font-semibold transition-colors ${
+                                className={`text-[15px] font-semibold transition-colors ${
                                   isActive
                                     ? 'text-[#283FD7] dark:text-[#93C5FD]'
                                     : 'text-slate-900 dark:text-white group-hover/item:text-[#283FD7] dark:group-hover/item:text-[#60A5FA]'
@@ -165,7 +165,7 @@ export default function Navbar() {
                                 {p.name}
                               </span>
                               {p.badge && (
-                                <span className="text-[9px] font-mono-tech uppercase px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20 font-bold">
+                                <span className="text-[10px] font-mono-tech uppercase px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20 font-bold">
                                   {p.badge}
                                 </span>
                               )}
@@ -184,7 +184,7 @@ export default function Navbar() {
 
             <Link
               href="/#what-we-do"
-              className="text-[13px] font-medium text-slate-700 hover:text-[#283FD7] dark:text-slate-200 dark:hover:text-[#60A5FA] transition-colors relative group py-1"
+              className="text-[15px] font-medium text-slate-700 hover:text-[#283FD7] dark:text-slate-200 dark:hover:text-[#60A5FA] transition-colors relative group py-1"
             >
               What We Do
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#F2520E] to-[#283FD7] group-hover:w-full transition-all duration-300 shadow-[0_0_8px_rgba(40,63,215,0.4)]" />
@@ -192,7 +192,7 @@ export default function Navbar() {
 
             <Link
               href="/#mission"
-              className="text-[13px] font-medium text-slate-700 hover:text-[#283FD7] dark:text-slate-200 dark:hover:text-[#60A5FA] transition-colors relative group py-1"
+              className="text-[15px] font-medium text-slate-700 hover:text-[#283FD7] dark:text-slate-200 dark:hover:text-[#60A5FA] transition-colors relative group py-1"
             >
               Mission
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#F2520E] to-[#283FD7] group-hover:w-full transition-all duration-300 shadow-[0_0_8px_rgba(40,63,215,0.4)]" />
@@ -200,7 +200,7 @@ export default function Navbar() {
 
             <Link
               href="/#contact"
-              className="text-[13px] font-medium text-slate-700 hover:text-[#283FD7] dark:text-slate-200 dark:hover:text-[#60A5FA] transition-colors relative group py-1"
+              className="text-[15px] font-medium text-slate-700 hover:text-[#283FD7] dark:text-slate-200 dark:hover:text-[#60A5FA] transition-colors relative group py-1"
             >
               Contact
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#F2520E] to-[#283FD7] group-hover:w-full transition-all duration-300 shadow-[0_0_8px_rgba(40,63,215,0.4)]" />
@@ -211,7 +211,7 @@ export default function Navbar() {
             <ThemeToggle />
             <Link
               href="/#products"
-              className="inline-flex items-center gap-2 text-[12px] font-semibold tracking-wider uppercase text-[#283FD7] dark:text-[#93C5FD] border border-[#283FD7]/30 hover:border-[#283FD7] hover:bg-[#283FD7]/10 dark:hover:bg-[#283FD7]/20 hover:shadow-[0_0_20px_rgba(40,63,215,0.2)] rounded-full px-5 py-2 transition-all duration-300"
+              className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold tracking-wider uppercase text-[#283FD7] dark:text-[#93C5FD] border border-[#283FD7]/30 hover:border-[#283FD7] hover:bg-[#283FD7]/10 dark:hover:bg-[#283FD7]/20 hover:shadow-[0_0_20px_rgba(40,63,215,0.2)] rounded-full px-5 py-2.5 transition-all duration-300"
             >
               Explore Products <ArrowUpRight className="w-3.5 h-3.5 text-[#F2520E]" />
             </Link>

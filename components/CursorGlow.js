@@ -43,21 +43,20 @@ export default function CursorGlow() {
       {/* Dynamic Molten Hearth Core Follower - GPU accelerated */}
       <div
         ref={glowRef}
-        className="pointer-events-none fixed top-0 left-0 z-[100] w-[500px] h-[500px] rounded-full mix-blend-multiply dark:mix-blend-screen hidden md:block opacity-60 dark:opacity-90 will-change-transform"
+        className="pointer-events-none fixed top-0 left-0 z-[100] w-[450px] h-[450px] rounded-full hidden md:block opacity-70 dark:opacity-80 will-change-transform"
         style={{
           transform: 'translate3d(-1000px, -1000px, 0) translate(-50%, -50%)',
           background:
-            'radial-gradient(circle, rgba(255, 100, 0, 0.08) 0%, rgba(255, 160, 0, 0.03) 40%, transparent 70%)',
-          transition: 'opacity 0.2s ease',
+            'radial-gradient(circle, rgba(255, 110, 0, 0.08) 0%, rgba(255, 160, 0, 0.02) 45%, transparent 70%)',
         }}
       />
       {/* Warm Ambient Underglow */}
       <div
         ref={underglowRef}
-        className="pointer-events-none fixed top-0 left-0 z-[99] w-[260px] h-[260px] rounded-full mix-blend-multiply dark:mix-blend-screen hidden md:block opacity-40 dark:opacity-75 will-change-transform"
+        className="pointer-events-none fixed top-0 left-0 z-[99] w-[240px] h-[240px] rounded-full hidden md:block opacity-50 dark:opacity-70 will-change-transform"
         style={{
           transform: 'translate3d(-1000px, -1000px, 0) translate(-50%, -50%)',
-          background: 'radial-gradient(circle, rgba(255, 120, 0, 0.06) 0%, transparent 65%)',
+          background: 'radial-gradient(circle, rgba(255, 120, 0, 0.05) 0%, transparent 65%)',
         }}
       />
 

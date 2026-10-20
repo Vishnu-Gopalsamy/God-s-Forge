@@ -174,53 +174,53 @@ export default function SuvaiPage() {
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-[#F2520E] text-xs font-mono-tech tracking-[0.2em] uppercase mb-6"
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-[#F2520E] text-xs sm:text-sm font-mono-tech tracking-[0.2em] uppercase mb-6 font-semibold"
           >
-            <UtensilsCrossed className="w-3.5 h-3.5" />
+            <UtensilsCrossed className="w-4 h-4" />
             HOSPITALITY TECHNOLOGY
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl sm:text-7xl md:text-8xl font-serif text-slate-900 dark:text-white tracking-tight"
+            transition={{ duration: 0.6, delay: 0.05 }}
+            className="text-6xl sm:text-8xl md:text-9xl font-serif text-slate-900 dark:text-white tracking-tight leading-[0.95]"
           >
             Suvai.
           </motion.h1>
 
           {/* Hero pitch from brief */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-6 text-xl sm:text-2xl md:text-3xl text-slate-700 dark:text-slate-200 font-light max-w-3xl mx-auto leading-relaxed text-balance"
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="mt-6 text-2xl sm:text-3xl md:text-4xl text-slate-800 dark:text-slate-100 font-serif max-w-4xl mx-auto leading-snug text-balance"
           >
             A QR-based digital menu for restaurants, cafes, and ice cream parlors.
           </motion.p>
 
           {/* Problem / Solution Highlight */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.35 }}
-            className="mt-10 p-6 sm:p-8 rounded-3xl bg-white/90 dark:bg-[#0B101D]/90 border border-slate-200 dark:border-slate-800 shadow-lg max-w-3xl mx-auto backdrop-blur-md text-left"
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mt-10 p-7 sm:p-9 rounded-3xl bg-white/90 dark:bg-[#0B101D]/90 border border-slate-200 dark:border-slate-800 shadow-lg max-w-4xl mx-auto backdrop-blur-md text-left"
           >
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="border-b sm:border-b-0 sm:border-r border-slate-200 dark:border-slate-800 pb-4 sm:pb-0 sm:pr-6">
-                <div className="text-[10px] font-mono-tech tracking-wider uppercase text-red-500 font-semibold mb-2">
+                <div className="text-xs sm:text-sm font-mono-tech tracking-wider uppercase text-red-500 font-bold mb-2">
                   The Problem
                 </div>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-light">
                   Paper menus are static and can&rsquo;t show offers or combos in real time. Reprinting costs money, and dish availability changes daily.
                 </p>
               </div>
               <div className="sm:pl-2">
-                <div className="text-[10px] font-mono-tech tracking-wider uppercase text-emerald-500 font-semibold mb-2">
+                <div className="text-xs sm:text-sm font-mono-tech tracking-wider uppercase text-emerald-500 font-bold mb-2">
                   The Suvai Solution
                 </div>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-light">
                   Suvai updates instantly with one tap from the owner&rsquo;s phone, and makes dishes look irresistible with rich food animation.
                 </p>
               </div>
@@ -229,10 +229,10 @@ export default function SuvaiPage() {
 
           {/* CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-10 flex flex-wrap justify-center gap-4"
+            transition={{ duration: 0.5, delay: 0.35 }}
+            className="mt-12 flex flex-wrap justify-center gap-5"
           >
             <button
               onClick={() => setModalOpen(true)}

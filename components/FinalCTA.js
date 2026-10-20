@@ -30,24 +30,23 @@ export default function FinalCTA() {
         type="general"
       />
 
-      {/* Radiant Glow */}
+      {/* Ambient Soft Glow - Hardware accelerated without heavy filter recalculations */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-[#F2520E]/10 via-[#283FD7]/15 to-transparent blur-[120px] animate-flame-pulse" />
-        <div className="absolute w-[800px] h-[800px] rounded-full border border-slate-200/60 dark:border-slate-800/80 animate-spin-forge" />
+        <div className="w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-[#F2520E]/10 via-[#283FD7]/10 to-transparent opacity-80" />
       </div>
 
-      <div className="relative max-w-4xl mx-auto px-6 lg:px-10 text-center z-10">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/95 dark:bg-[#0B101D] border border-slate-200 dark:border-blue-900/40 text-[#283FD7] dark:text-[#93C5FD] text-[11px] font-mono-tech tracking-[0.24em] uppercase mb-8 shadow-sm font-semibold">
-          <Flame className="w-3.5 h-3.5 text-[#F2520E] fill-[#F2520E]" />
+      <div className="relative max-w-5xl mx-auto px-6 lg:px-10 text-center z-10">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 dark:bg-[#0B101D] border border-slate-200 dark:border-blue-900/40 text-[#283FD7] dark:text-[#93C5FD] text-xs sm:text-sm font-mono-tech tracking-[0.24em] uppercase mb-8 shadow-sm font-semibold">
+          <Flame className="w-4 h-4 text-[#F2520E] fill-[#F2520E]" />
           CONNECT WITH GOD&apos;S FORGE
         </div>
 
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-6xl md:text-7xl font-serif tracking-tight leading-[1.05] text-balance text-slate-900 dark:text-white"
+          transition={{ duration: 0.6 }}
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif tracking-tight leading-[1.05] text-balance text-slate-900 dark:text-white"
         >
           Let&rsquo;s build practical tools <br />
           that <span className="italic text-brand-gradient font-normal">make an impact.</span>
@@ -57,37 +56,37 @@ export default function FinalCTA() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-light max-w-xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="mt-6 text-xl sm:text-2xl text-slate-700 dark:text-slate-300 font-light max-w-2xl mx-auto leading-relaxed"
         >
           Whether you run a restaurant, manage lending operations, or want to pilot agricultural automation, we&rsquo;d love to talk.
         </motion.p>
 
         {/* Actions — 2-row layout for clean alignment */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-10 flex flex-col items-center gap-4"
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="mt-12 flex flex-col items-center gap-5"
         >
           {/* Row 1: Primary actions */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full">
             <button
               onClick={() => setModalOpen(true)}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-[#F2520E] via-[#FF6B26] to-[#283FD7] text-white font-semibold text-sm shadow-[0_6px_25px_rgba(242,82,14,0.35)] hover:scale-105 active:scale-95 transition-transform"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full bg-gradient-to-r from-[#F2520E] via-[#FF6B26] to-[#283FD7] text-white font-semibold text-base sm:text-lg shadow-[0_6px_25px_rgba(242,82,14,0.35)] hover:scale-105 active:scale-95 transition-transform"
             >
-              <MessageSquare className="w-4 h-4" />
-              Get in Touch <ArrowUpRight className="w-4 h-4" />
+              <MessageSquare className="w-5 h-5" />
+              Get in Touch <ArrowUpRight className="w-5 h-5" />
             </button>
 
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold text-sm shadow-md hover:scale-105 active:scale-95 transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold text-base sm:text-lg shadow-md hover:scale-105 active:scale-95 transition-all"
             >
-              <MessageCircle className="w-4 h-4 fill-white" />
+              <MessageCircle className="w-5 h-5 fill-white" />
               WhatsApp Us
             </a>
           </div>
@@ -98,7 +97,7 @@ export default function FinalCTA() {
               href={gmailUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0B101D] text-slate-700 dark:text-slate-200 text-sm font-medium hover:border-[#283FD7] transition-all shadow-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-[#0B101D] text-slate-800 dark:text-slate-200 text-sm sm:text-base font-medium hover:border-[#283FD7] transition-all shadow-sm"
             >
               <Mail className="w-4 h-4 text-[#F2520E]" />
               Direct Email
@@ -106,7 +105,7 @@ export default function FinalCTA() {
 
             <button
               onClick={copyEmail}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 text-slate-600 dark:text-slate-400 text-sm font-mono-tech hover:text-slate-900 dark:hover:text-white transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 text-slate-600 dark:text-slate-300 text-sm sm:text-base font-mono-tech hover:text-slate-900 dark:hover:text-white transition-all font-medium"
             >
               {copied ? (
                 <>

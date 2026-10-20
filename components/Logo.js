@@ -17,10 +17,10 @@ export default function Logo({ size = 40, showText = true, className = '' }) {
 
       {showText && (
         <div className="flex flex-col">
-          <span className="text-[15px] font-cinzel font-bold tracking-[0.18em] uppercase text-[#283FD7] dark:text-[#60A5FA]">
+          <span className="text-base sm:text-lg font-cinzel font-bold tracking-[0.16em] uppercase text-[#283FD7] dark:text-[#60A5FA] leading-tight">
             God&rsquo;s Forge
           </span>
-          <span className="text-[9px] font-mono-tech tracking-[0.24em] uppercase text-[#F2520E] dark:text-[#FB923C] -mt-0.5 font-semibold">
+          <span className="text-[11px] sm:text-xs font-mono-tech tracking-[0.2em] uppercase text-[#F2520E] dark:text-[#FB923C] font-semibold">
             Flame &bull; Anvil &bull; Systems
           </span>
         </div>

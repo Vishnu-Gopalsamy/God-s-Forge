@@ -26,21 +26,21 @@ export default function Footer() {
                 <Logo size={46} />
               </Link>
             </div>
-            <p className="text-2xl md:text-3xl font-serif text-slate-900 dark:text-white leading-tight max-w-md">
+            <p className="text-3xl md:text-4xl font-serif text-slate-900 dark:text-white leading-tight max-w-md">
               Building practical technology for{' '}
               <span className="italic text-brand-gradient font-normal">everyday businesses</span> and the{' '}
               <span className="italic text-brand-gradient font-normal">farms that feed them</span>.
             </p>
-            <p className="text-sm text-slate-600 dark:text-slate-400 mt-4 max-w-sm font-light leading-relaxed">
+            <p className="text-base text-slate-600 dark:text-slate-300 mt-4 max-w-sm font-light leading-relaxed">
               Ground-level software today &bull; autonomous robotics and environmental sustainability tomorrow.
             </p>
           </div>
 
           <div className="md:col-span-3">
-            <div className="text-[10px] font-mono-tech tracking-[0.24em] uppercase text-[#283FD7] dark:text-[#60A5FA] mb-6 font-semibold">
+            <div className="text-xs sm:text-sm font-mono-tech tracking-[0.24em] uppercase text-[#283FD7] dark:text-[#60A5FA] mb-6 font-semibold">
               Products &amp; Navigation
             </div>
-            <ul className="space-y-3">
+            <ul className="space-y-3.5">
               {[
                 { label: 'Suvai (Digital Menu)', href: '/suvai' },
                 { label: 'Moneylender App', href: '/moneylender' },
@@ -52,9 +52,9 @@ export default function Footer() {
                 <li key={l.label}>
                   <Link
                     href={l.href}
-                    className="text-sm text-slate-600 hover:text-[#283FD7] dark:text-slate-300 dark:hover:text-[#60A5FA] transition-colors flex items-center gap-2 group"
+                    className="text-base text-slate-700 hover:text-[#283FD7] dark:text-slate-200 dark:hover:text-[#60A5FA] transition-colors flex items-center gap-2 group font-medium"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[#F2520E] group-hover:w-2 transition-all" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#F2520E] group-hover:w-3 transition-all" />
                     {l.label}
                   </Link>
                 </li>
@@ -63,16 +63,16 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-4">
-            <div className="text-[10px] font-mono-tech tracking-[0.24em] uppercase text-[#283FD7] dark:text-[#60A5FA] mb-6 font-semibold">
+            <div className="text-xs sm:text-sm font-mono-tech tracking-[0.24em] uppercase text-[#283FD7] dark:text-[#60A5FA] mb-6 font-semibold">
               Direct Contact &amp; Channels
             </div>
 
-            <div className="space-y-3 mb-6">
+            <div className="space-y-3.5 mb-6">
               {/* Phone / Call */}
               <div>
                 <a
                   href={`tel:+${phoneRaw}`}
-                  className="inline-flex items-center gap-2.5 text-sm font-mono-tech text-slate-800 dark:text-slate-200 hover:text-[#283FD7] dark:hover:text-[#60A5FA] transition-colors font-medium"
+                  className="inline-flex items-center gap-2.5 text-base font-mono-tech text-slate-800 dark:text-slate-200 hover:text-[#283FD7] dark:hover:text-[#60A5FA] transition-colors font-semibold"
                 >
                   <Phone className="w-4 h-4 text-[#F2520E]" />
                   <span>{phoneDisplay}</span>
@@ -85,7 +85,7 @@ export default function Footer() {
                   href={gmailUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 text-sm font-mono-tech text-slate-800 dark:text-slate-200 hover:text-[#283FD7] dark:hover:text-[#60A5FA] transition-colors font-medium"
+                  className="inline-flex items-center gap-2.5 text-base font-mono-tech text-slate-800 dark:text-slate-200 hover:text-[#283FD7] dark:hover:text-[#60A5FA] transition-colors font-semibold"
                 >
                   <Mail className="w-4 h-4 text-[#F2520E]" />
                   <span>{email}</span>
@@ -100,9 +100,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="w-10 h-10 rounded-xl bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:border-[#283FD7] hover:text-[#283FD7] text-slate-700 dark:text-slate-300 shadow-sm transition-all"
+                className="w-11 h-11 rounded-xl bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:border-[#283FD7] hover:text-[#283FD7] text-slate-700 dark:text-slate-300 shadow-sm transition-all"
               >
-                <Linkedin className="w-4 h-4" strokeWidth={1.75} />
+                <Linkedin className="w-5 h-5" strokeWidth={1.75} />
               </a>
 
               <a
@@ -110,9 +110,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="w-10 h-10 rounded-xl bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:border-[#F2520E] hover:text-[#F2520E] text-slate-700 dark:text-slate-300 shadow-sm transition-all"
+                className="w-11 h-11 rounded-xl bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:border-[#F2520E] hover:text-[#F2520E] text-slate-700 dark:text-slate-300 shadow-sm transition-all"
               >
-                <Instagram className="w-4 h-4" strokeWidth={1.75} />
+                <Instagram className="w-5 h-5" strokeWidth={1.75} />
               </a>
 
               <a
@@ -120,9 +120,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="w-10 h-10 rounded-xl bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:border-[#25D366] hover:text-[#25D366] text-slate-700 dark:text-slate-300 shadow-sm transition-all"
+                className="w-11 h-11 rounded-xl bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:border-[#25D366] hover:text-[#25D366] text-slate-700 dark:text-slate-300 shadow-sm transition-all"
               >
-                <MessageCircle className="w-4 h-4" strokeWidth={1.75} />
+                <MessageCircle className="w-5 h-5" strokeWidth={1.75} />
               </a>
             </div>
 
@@ -130,18 +130,18 @@ export default function Footer() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-semibold hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-semibold hover:opacity-90 transition-opacity shadow-sm"
             >
-              <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
-              WhatsApp {phoneDisplay} <ArrowUpRight className="w-3.5 h-3.5" />
+              <MessageCircle className="w-4 h-4 text-[#25D366]" />
+              WhatsApp {phoneDisplay} <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-200/80 dark:border-slate-800/80 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[12px] text-slate-500 dark:text-slate-400">
+        <div className="pt-8 border-t border-slate-200/80 dark:border-slate-800/80 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
           <div>&copy; {new Date().getFullYear()} God&rsquo;s Forge Technologies. All rights reserved.</div>
           <div className="flex items-center gap-2 font-mono-tech text-[#283FD7] dark:text-[#60A5FA] font-medium">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#F2520E] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#F2520E] animate-pulse" />
             Tempered in India.
           </div>
         </div>

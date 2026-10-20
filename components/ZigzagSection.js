@@ -15,19 +15,19 @@ export default function ZigzagSection({ title, subtitle, badge, items }) {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-blue-900/40 text-[#283FD7] dark:text-[#93C5FD] text-[11px] font-mono-tech tracking-[0.24em] uppercase mb-4 shadow-sm font-semibold"
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white dark:bg-[#0B101D] border border-slate-200 dark:border-blue-900/40 text-[#283FD7] dark:text-[#93C5FD] text-xs sm:text-sm font-mono-tech tracking-[0.24em] uppercase mb-4 shadow-sm font-semibold"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#F2520E]" />
+              <Sparkles className="w-4 h-4 text-[#F2520E]" />
               {badge}
             </motion.div>
           )}
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-serif text-slate-900 dark:text-white tracking-tight"
+            transition={{ duration: 0.6 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-slate-900 dark:text-white tracking-tight"
           >
             {title}
           </motion.h2>
@@ -36,8 +36,8 @@ export default function ZigzagSection({ title, subtitle, badge, items }) {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-4 text-base sm:text-lg text-slate-600 dark:text-slate-400 font-light"
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="mt-5 text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-300 font-light"
             >
               {subtitle}
             </motion.p>
@@ -52,10 +52,10 @@ export default function ZigzagSection({ title, subtitle, badge, items }) {
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 className={`grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-14 items-center`}
               >
                 {/* Photo Column - On mobile, always on top */}
@@ -82,13 +82,13 @@ export default function ZigzagSection({ title, subtitle, badge, items }) {
 
                       {/* Pill Tag */}
                       {item.tag && (
-                        <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[10px] font-mono-tech tracking-wider uppercase text-white/90 border border-white/15">
+                        <div className="absolute top-4 left-4 z-10 px-3.5 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-xs font-mono-tech tracking-wider uppercase text-white font-medium border border-white/20">
                           {item.tag}
                         </div>
                       )}
 
                       {/* Step Indicator */}
-                      <div className="absolute bottom-4 right-4 z-10 w-9 h-9 rounded-full bg-white/90 dark:bg-[#0B101D]/90 backdrop-blur-md border border-slate-200 dark:border-slate-700 flex items-center justify-center text-xs font-mono-tech font-bold text-[#F2520E]">
+                      <div className="absolute bottom-4 right-4 z-10 w-11 h-11 rounded-full bg-white/95 dark:bg-[#0B101D]/95 backdrop-blur-md border border-slate-200 dark:border-slate-700 flex items-center justify-center text-sm font-mono-tech font-bold text-[#F2520E] shadow-sm">
                         0{idx + 1}
                       </div>
                     </div>
@@ -102,22 +102,22 @@ export default function ZigzagSection({ title, subtitle, badge, items }) {
                   }`}
                 >
                   <div className="space-y-4">
-                    <div className="text-[11px] font-mono-tech tracking-[0.22em] uppercase text-[#F2520E] font-semibold">
+                    <div className="text-xs sm:text-sm font-mono-tech tracking-[0.22em] uppercase text-[#F2520E] font-bold">
                       Phase 0{idx + 1} &bull; {item.subtitle || 'Insight'}
                     </div>
 
-                    <h3 className="text-2xl sm:text-3xl font-serif text-slate-900 dark:text-white tracking-tight leading-snug">
+                    <h3 className="text-3xl sm:text-4xl font-serif text-slate-900 dark:text-white tracking-tight leading-snug">
                       {item.title}
                     </h3>
 
                     {/* Short text per set: one punchy sentence on problem, one on solution */}
-                    <p className="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed font-light">
+                    <p className="text-lg sm:text-xl text-slate-700 dark:text-slate-200 leading-relaxed font-light">
                       {item.text}
                     </p>
 
                     {item.highlight && (
-                      <div className="inline-flex items-center gap-2 pt-2 text-xs font-mono-tech text-[#283FD7] dark:text-[#60A5FA]">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#283FD7] dark:bg-[#60A5FA]" />
+                      <div className="inline-flex items-center gap-2 pt-2 text-sm sm:text-base font-mono-tech text-[#283FD7] dark:text-[#60A5FA] font-medium">
+                        <span className="w-2 h-2 rounded-full bg-[#283FD7] dark:bg-[#60A5FA]" />
                         {item.highlight}
                       </div>
                     )}
