@@ -2,11 +2,11 @@ import './globals.css'
 import ThemeProvider from '@/components/ThemeProvider'
 
 export const metadata = {
-  title: "God's Forge — We Forge What's Next",
-  description: "God's Forge is a product-focused technology company building intelligent systems for complex real-world problems. AI, cybersecurity, and predictive technologies.",
+  title: "God's Forge — Practical Technology for Everyday Businesses & Farms",
+  description: "God's Forge builds high-utility tools for everyday businesses today, funding autonomous robotics and sustainability technology for tomorrow.",
   openGraph: {
-    title: "God's Forge — We Forge What's Next",
-    description: "Intelligent products built to solve problems that matter.",
+    title: "God's Forge — Practical Technology for Everyday Businesses & Farms",
+    description: "Building practical software for local businesses and autonomous robotics for the farms that feed them.",
     type: 'website',
   },
 }

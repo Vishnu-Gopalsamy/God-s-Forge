@@ -3,12 +3,9 @@
 import CursorGlow from '@/components/CursorGlow'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import WhatWeDo from '@/components/WhatWeDo'
 import Products from '@/components/Products'
-import Philosophy from '@/components/Philosophy'
-import ForgeTimeline from '@/components/ForgeTimeline'
-import Technology from '@/components/Technology'
-import Research from '@/components/Research'
-import About from '@/components/About'
+import Mission from '@/components/Mission'
 import FinalCTA from '@/components/FinalCTA'
 import Footer from '@/components/Footer'
 
@@ -18,12 +15,9 @@ export default function Home() {
       <CursorGlow />
       <Navbar />
       <Hero />
+      <WhatWeDo />
       <Products />
-      <Philosophy />
-      <ForgeTimeline />
-      <Technology />
-      <Research />
-      <About />
+      <Mission />
       <FinalCTA />
       <Footer />
     </main>

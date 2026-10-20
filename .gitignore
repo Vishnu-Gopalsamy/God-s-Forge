@@ -48,3 +48,6 @@ ehthumbs.db
 *.njsproj
 *.sln
 *.sw?
+
+# Content briefs & draft notes
+gods-forge-website-content.md
