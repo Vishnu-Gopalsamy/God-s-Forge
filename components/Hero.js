@@ -8,26 +8,16 @@ import MagneticButton from './MagneticButton'
 
 function FloatingOrb({ size, x, y, color, delay, duration }) {
   return (
-    <motion.div
-      className="absolute rounded-full pointer-events-none"
+    <div
+      className="absolute rounded-full pointer-events-none will-change-transform animate-float"
       style={{
         width: size,
         height: size,
         left: `${x}%`,
         top: `${y}%`,
         background: color,
-        filter: `blur(${size / 2}px)`,
-      }}
-      animate={{
-        y: [0, -20, 0],
-        scale: [1, 1.05, 1],
-        opacity: [0.3, 0.5, 0.3],
-      }}
-      transition={{
-        duration,
-        delay,
-        repeat: Infinity,
-        ease: 'easeInOut',
+        animationDelay: `${delay}s`,
+        animationDuration: `${duration}s`,
       }}
     />
   )
